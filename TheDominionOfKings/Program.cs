@@ -6,7 +6,8 @@
 
     return totalEstates + totalDutchies + totalProvinces;
 }
-
+Console.BackgroundColor = ConsoleColor.Yellow; // makes the text background yellow
+Console.Clear(); // wipes out all on screen text and changes entire bg color
 Console.WriteLine(calculateKingdomScore(4, 3, 1));
 
 

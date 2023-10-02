@@ -1,0 +1,10 @@
+Console.ReadKey();  does not wait for user to click enter, it reads any key
+if you dont want the letter or key pressed to appear on the screen you should use
+Console.ReadKey(true);
+
+Console.BackgroundColor = ConsoleColor.Yellow; sets the background color to yellow
+Console.Clear(); // wipes out all on screen text and changes entire bg color
+
+Console.Title = "hello i am king"; // changes the text in the terminals title area
+
+Console.Beep(440, 1000); frequency, duration in milliseconds, you can use console beep to play a melody.
