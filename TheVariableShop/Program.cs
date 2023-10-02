@@ -14,6 +14,9 @@ float catJumpHeightMeters = 1.5f; // 32-bit single-precision floating point
 double catSpeedMph = 15.34;// 64-bit double precision floating point type
 decimal catWeightInKg = 6.5m;// 128-bit decimal value
 
+catName = "Grapefruit";
+catSpeedMph = 12.43;
+
 Console.WriteLine($"Do you love cats? {lovesCats}. Let's talk about {catName}!");
 Console.WriteLine($"{catName} has {catLives} lives left, is {catLength} cm long, and weighs {catWeightInKg} kg.");
 Console.WriteLine($"With {catWhiskerCount} whiskers that are {whiskerLengthInMm} mm long, and a total of {totalCatHairs} hairs, {catName} is quite unique.");
