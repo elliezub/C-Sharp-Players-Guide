@@ -8,3 +8,11 @@
 }
 
 Console.WriteLine(calculateKingdomScore(4, 3, 1));
+
+
+// unrelated note on incrementing after vs before
+int x = 5;
+int y = x++;
+
+Console.WriteLine(y);
+Console.WriteLine(x);
