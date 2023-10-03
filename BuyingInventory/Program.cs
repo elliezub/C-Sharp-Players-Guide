@@ -8,6 +8,8 @@ Console.WriteLine("6 - Canoe");
 Console.WriteLine("7 - Food Supplies");
 Console.Write("What number do you want to see the price of? ");
 int itemNumber = Convert.ToInt32(Console.ReadLine());
+Console.Write("Whats your name? ");
+string name = Console.ReadLine();
 
 string item = itemNumber switch
 {
@@ -21,7 +23,7 @@ string item = itemNumber switch
     _ => "Invalid Choice"
 };
 
-int price = itemNumber switch
+double price = itemNumber switch
 {
     1 => 10,
     2 => 15,
@@ -33,4 +35,10 @@ int price = itemNumber switch
     _ => 0
 };
 
+// discounted inventory
+
+if (name == "ellie")
+    price /= 2;
+
 Console.WriteLine($"The {item} cost {price} gold");
+
