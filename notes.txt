@@ -8,3 +8,16 @@ Console.Clear(); // wipes out all on screen text and changes entire bg color
 Console.Title = "hello i am king"; // changes the text in the terminals title area
 
 Console.Beep(440, 1000); frequency, duration in milliseconds, you can use console beep to play a melody.
+
+Switch expression example
+string item = itemNumber switch
+{
+    1 => "Rope",
+    2 => "Torches",
+    3 => "Climbing Equipment",
+    4 => "Clean Water",
+    5 => "Machete",
+    6 => "Canoe",
+    7 => "Food Supplies",
+    _ => "Invalid Choice"
+};
