@@ -21,3 +21,8 @@ string item = itemNumber switch
     7 => "Food Supplies",
     _ => "Invalid Choice"
 };
+
+range operator ..
+
+^ operator lets you index from the end of an array
+
