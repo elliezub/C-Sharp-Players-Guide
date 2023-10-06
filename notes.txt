@@ -27,3 +27,26 @@ range operator ..
 ^ operator lets you index from the end of an array
 
 re-read memory management 123 knowledge check memory
+
+OOP !!!
+
+We split our program into multiple components called objects - objects work together to solve the overall problem
+objects contain variables and methods - most objects have a few of each
+
+every object belongs to a specific class or type 
+
+an objects class determines the objects "shape"
+
+all objects of the same class have the same data elements and methods, you can think of classes as catagories; 
+everything in a class is similar in nature and structure
+
+objects of a particular class are often called instances of the class
+
+** Use the right type for everything you create. if the right type doesnt exist, create it first. 
+
+enumeration , enumerate - to list things off one by one, 
+how to define a new "type"
+
+the years seasons are a great way to utilize enumeration
+enum Season { Winter, Spring, Summer, Fall }
+
