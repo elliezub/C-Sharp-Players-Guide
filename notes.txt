@@ -50,3 +50,11 @@ how to define a new "type"
 the years seasons are a great way to utilize enumeration
 enum Season { Winter, Spring, Summer, Fall }
 
+ENUMERATION EXAMPLE: Simulas Test
+
+Tuples - review This
+
+
+
+
+

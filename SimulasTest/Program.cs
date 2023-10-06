@@ -1,4 +1,6 @@
-﻿ChestState current = ChestState.Locked;
+﻿// ENUMERATION
+
+ChestState current = ChestState.Locked;
 
 while (true)
 {
