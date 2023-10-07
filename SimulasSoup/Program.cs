@@ -1,5 +1,5 @@
 ﻿// first attempt
-// (FoodType type, MainIngredient ingredient, Seasoning seasoning) soup = GetSoup(); // i know i dont have a get soup method
+// (FoodType type, MainIngredient ingredient, Seasoning seasoning) soup = GetSoup();
 
 // Console.Write("Pick a type (soup, stew or gumbo): ");
 // FoodType = Console.ReadLine();
@@ -18,70 +18,148 @@
 
 //second attempt -- no tuples
 
-FoodType currentFoodType = FoodType.soup;
-MainIngredient currentMainIngredient = MainIngredient.mushrooms;
-Seasoning currentSeasoning = Seasoning.spicy;
-string choice;
+// FoodType currentFoodType = FoodType.soup;
+// MainIngredient currentMainIngredient = MainIngredient.mushrooms;
+// Seasoning currentSeasoning = Seasoning.spicy;
+// string choice;
 
-Console.WriteLine(currentFoodType);
+// Console.WriteLine(currentFoodType);
 
-while (true)
+// while (true)
+// {
+//     Console.Write("Pick a type (soup, stew or gumbo): ");
+//     choice = Console.ReadLine();
+    
+//     switch (choice)
+//     {
+//         case "soup":
+//             currentFoodType = FoodType.soup;
+//             break;
+//         case "stew":
+//             currentFoodType = FoodType.stew;
+//             break;
+//         case "gumbo":
+//             currentFoodType = FoodType.gumbo;
+//             break;
+//     }
+
+//     Console.Write("Pick a main ingredient (mushrooms, chicken, carrots, or potatoes): ");
+//     choice = Console.ReadLine();
+    
+//     switch (choice)
+//     {
+//         case "mushrooms":
+//             currentMainIngredient = MainIngredient.mushrooms;
+//             break;
+//         case "chicken":
+//             currentMainIngredient = MainIngredient.chicken;
+//             break;
+//         case "carrots":
+//             currentMainIngredient = MainIngredient.carrots;
+//             break;
+//         case "potatoes":
+//             currentMainIngredient = MainIngredient.potatoes;
+//             break;
+//     }
+
+//     Console.Write("Pick a seasoning (spicy, salty, or sweet):  ");
+//     choice = Console.ReadLine();
+    
+//     switch (choice)
+//     {
+//         case "spicy":
+//             currentSeasoning = Seasoning.spicy;
+//             break;
+//         case "salty":
+//             currentSeasoning = Seasoning.salty;
+//             break;
+//         case "sweet":
+//             currentSeasoning = Seasoning.sweet;
+//             break;
+//     }
+
+//     Console.WriteLine($"your soup: {currentSeasoning} {currentMainIngredient} {currentFoodType}");
+
+// }
+
+// enum Seasoning { spicy, salty, sweet }
+// enum MainIngredient { mushrooms, chicken, carrots, potatoes }
+// enum FoodType { soup, stew, gumbo }
+
+
+// ------------------------------------------------------------------------------------
+// third attempt with tuples
+
+(FoodType, MainIngredient, Seasoning) soup = GetSoup();
+Console.WriteLine($"Your soup: {soup.Item3} {soup.Item2} {soup.Item1}");
+
+(FoodType, MainIngredient, Seasoning) GetSoup()
+{
+    FoodType type = GetFoodType();
+    MainIngredient ingredient = GetMainIngredient();
+    Seasoning seasoning = GetSeasoning();
+    return (type, ingredient, seasoning);
+}
+
+FoodType GetFoodType()
 {
     Console.Write("Pick a type (soup, stew or gumbo): ");
-    choice = Console.ReadLine();
+    string choice = Console.ReadLine();
     
     switch (choice)
     {
         case "soup":
-            currentFoodType = FoodType.soup;
-            break;
+            return FoodType.Soup;
         case "stew":
-            currentFoodType = FoodType.stew;
-            break;
+            return FoodType.Stew;
         case "gumbo":
-            currentFoodType = FoodType.gumbo;
-            break;
+            return FoodType.Gumbo;
+        default:
+            Console.WriteLine("Invalid choice. Please enter soup, stew, or gumbo.");
+            return GetFoodType();
     }
+}
 
+MainIngredient GetMainIngredient()
+{
     Console.Write("Pick a main ingredient (mushrooms, chicken, carrots, or potatoes): ");
-    choice = Console.ReadLine();
+    string choice = Console.ReadLine();
     
     switch (choice)
     {
         case "mushrooms":
-            currentMainIngredient = MainIngredient.mushrooms;
-            break;
+            return MainIngredient.Mushrooms;
         case "chicken":
-            currentMainIngredient = MainIngredient.chicken;
-            break;
+            return MainIngredient.Chicken;
         case "carrots":
-            currentMainIngredient = MainIngredient.carrots;
-            break;
+            return MainIngredient.Carrots;
         case "potatoes":
-            currentMainIngredient = MainIngredient.potatoes;
-            break;
+            return MainIngredient.Potatoes;
+        default:
+            Console.WriteLine("Invalid choice. Please enter mushrooms, chicken, carrots, or potatoes.");
+            return GetMainIngredient(); 
     }
+}
 
+Seasoning GetSeasoning()
+{
     Console.Write("Pick a seasoning (spicy, salty, or sweet):  ");
-    choice = Console.ReadLine();
+    string choice = Console.ReadLine();
     
     switch (choice)
     {
         case "spicy":
-            currentSeasoning = Seasoning.spicy;
-            break;
+            return Seasoning.Spicy;
         case "salty":
-            currentSeasoning = Seasoning.salty;
-            break;
+            return Seasoning.Salty;
         case "sweet":
-            currentSeasoning = Seasoning.sweet;
-            break;
+            return Seasoning.Sweet;
+        default:
+            Console.WriteLine("Invalid choice. Please enter spicy, salty, or sweet.");
+            return GetSeasoning(); 
     }
-
-    Console.WriteLine($"your soup: {currentSeasoning} {currentMainIngredient} {currentFoodType}");
-
 }
 
-enum Seasoning { spicy, salty, sweet }
-enum MainIngredient { mushrooms, chicken, carrots, potatoes }
-enum FoodType { soup, stew, gumbo }
+enum Seasoning { Spicy, Salty, Sweet }
+enum MainIngredient { Mushrooms, Chicken, Carrots, Potatoes }
+enum FoodType { Soup, Stew, Gumbo }
