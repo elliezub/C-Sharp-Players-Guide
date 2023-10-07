@@ -73,7 +73,7 @@ void StartBattle()
 
             do
             {
-                Console.Write("Enter descired cannon range: ");
+                Console.Write("Enter desired cannon range: ");
                 try
                 {
                     bool isNumber = int.TryParse(Console.ReadLine(), out int readResult);
@@ -82,7 +82,7 @@ void StartBattle()
                         if (readResult == manticoreDistance)
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine("This round was a DIRECT HIT!");
+                            Console.WriteLine("That round was a DIRECT HIT!");
                             Console.ResetColor();
                             manticoreHealth -= damage;
                         }
@@ -117,6 +117,7 @@ void StartBattle()
                 gameEnded = true;
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("The city of Consolas has been destroyed!");
+                Console.ResetColor();
                 break;
             }
             else if (manticoreHealth > 0)
@@ -126,8 +127,9 @@ void StartBattle()
             else if (manticoreHealth <= 0)
             {
                 gameEnded = true;
-                Console.ForegroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("The Manticore has been destroyed! The city of Consolas has been saved!");
+                Console.ResetColor();
                 break;
             }
 
