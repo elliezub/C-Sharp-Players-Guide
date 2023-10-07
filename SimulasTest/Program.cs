@@ -14,7 +14,6 @@ while (true)
     if (current == ChestState.Closed && choice == "lock") current = ChestState.Locked;
     if (current == ChestState.Locked && choice == "unlock") current = ChestState.Unlocked;
     if (current == ChestState.Unlocked && choice == "open") current = ChestState.Open;
-
 }
 
 enum ChestState { Open, Closed, Locked, Unlocked }
