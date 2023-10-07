@@ -64,5 +64,5 @@ are essentially the same as any other method.
 
 this keyword - special variable that always refers to the object you are in 
 
-review chapters 16-18 and re-do the challenges
+review chapters 16-18 and re-do the challenges, also review different ways to structure switch statements
 
