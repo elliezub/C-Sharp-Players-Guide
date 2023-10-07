@@ -55,6 +55,10 @@ ENUMERATION EXAMPLE: Simulas Test
 Tuples - review This
 
 
+Classes --------------------------
+encapsulation - bundle together data and the operations on that data into a well defined cohesive unit
 
-
+constructors - special methods that run when an object comes to life to ensure it begins in a good state.
+constructors must use the same name as the class and they cannot list a return type. Otherwise, they 
+are essentially the same as any other method.
 

@@ -88,10 +88,12 @@
 
 
 // ------------------------------------------------------------------------------------
-// third attempt with tuples
+// third attempt with tuples + enumeration
 
 (FoodType, MainIngredient, Seasoning) soup = GetSoup();
 Console.WriteLine($"Your soup: {soup.Item3} {soup.Item2} {soup.Item1}");
+Console.WriteLine("Press any key to exit...");
+Console.ReadKey();
 
 (FoodType, MainIngredient, Seasoning) GetSoup()
 {
