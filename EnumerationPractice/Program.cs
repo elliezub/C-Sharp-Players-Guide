@@ -13,8 +13,8 @@ string input = Console.ReadLine();
 
 Dictionary<string, Mood> moodMap = new Dictionary<string, Mood>
 {
-    {"1", Mood.Happy },
-    {"2", Mood.Sad },
+    { "1", Mood.Happy },
+    { "2", Mood.Sad },
     { "3", Mood.Excited },
     { "4", Mood.Calm },
     { "5", Mood.Angry }
@@ -22,11 +22,11 @@ Dictionary<string, Mood> moodMap = new Dictionary<string, Mood>
 
 Dictionary<Mood, string> moodToEmoji = new Dictionary<Mood, string>
 {
-    {Mood.Happy, "😃" },
-    {Mood.Sad, "😞" },
-    {Mood.Excited, "😄" },
-    {Mood.Calm, "😌" },
-    {Mood.Angry, "😠" }
+    { Mood.Happy, "😃" },
+    { Mood.Sad, "😞" },
+    { Mood.Excited, "😄" },
+    { Mood.Calm, "😌" },
+    { Mood.Angry, "😠" }
 };
 
 if (moodMap.TryGetValue(input, out Mood selectedMood))
