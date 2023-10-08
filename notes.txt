@@ -66,3 +66,5 @@ this keyword - special variable that always refers to the object you are in
 
 review chapters 16-18 and re-do the challenges, also review different ways to structure switch statements
 
+Dictionaries -  like a real-life dictionary, but instead of words and their definitions, 
+it holds pairs of related items, and helps you quickly find the second item if you know the first one.
