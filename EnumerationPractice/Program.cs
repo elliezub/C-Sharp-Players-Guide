@@ -9,12 +9,7 @@ Console.Write("Enter the number corresponding to your mood: ");
 
 string input = Console.ReadLine();
 
-// switch (input) // this seems excessive?
-// {
-//     case "1":
-//         Console.WriteLine($"You're feeling {Mood.Happy}")
-//  // continue with switch
-// }
+// instead of switch, you can use dictionaries!
 
 Dictionary<string, Mood> moodMap = new Dictionary<string, Mood>
 {
@@ -43,6 +38,5 @@ else
 {
     Console.WriteLine("Invalid selection. please enter a valid number");
 }
-
 
 enum Mood { Happy = 1, Sad, Excited, Calm, Angry }
