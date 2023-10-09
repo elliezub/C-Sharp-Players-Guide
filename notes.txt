@@ -68,3 +68,10 @@ review chapters 16-18 and re-do the challenges, also review different ways to st
 
 Dictionaries -  like a real-life dictionary, but instead of words and their definitions, 
 it holds pairs of related items, and helps you quickly find the second item if you know the first one.
+
+
+
+Enumeration -----
+Enum.IsDefined(typeof(BookGenre), input) 
+As a whole, this statement is checking whether the value of input exists in the BookGenre enumeration.
+
