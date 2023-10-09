@@ -22,7 +22,7 @@ do
             BookGenre.Mystery => "The Alienist",
             BookGenre.Fantasy => "The Harry Potter series",
             BookGenre.ScienceFiction => "Journey to the Center of the Earth",
-            BookGenre.SelfHelp => "Atmoic Habits",
+            BookGenre.SelfHelp => "Atomic Habits",
             _ => "no recommendation found"
         };
 
