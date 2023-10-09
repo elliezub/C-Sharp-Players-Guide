@@ -1,4 +1,6 @@
-﻿Console.WriteLine("How are you feeling today?");
+﻿Console.OutputEncoding = System.Text.Encoding.UTF8; // use to get the emojis to show up in the terminal
+
+Console.WriteLine("How are you feeling today?");
 
 foreach (Mood mood in Enum.GetValues(typeof(Mood)))
 {
@@ -22,11 +24,11 @@ Dictionary<string, Mood> moodMap = new Dictionary<string, Mood>
 
 Dictionary<Mood, string> moodToEmoji = new Dictionary<Mood, string>
 {
-    { Mood.Happy, "😃" },
-    { Mood.Sad, "😞" },
-    { Mood.Excited, "😄" },
-    { Mood.Calm, "😌" },
-    { Mood.Angry, "😠" }
+    { Mood.Happy, "\U0001F603" },      // 😃
+    { Mood.Sad, "\U0001F61E" },        // 😞
+    { Mood.Excited, "\U0001F604" },    // 😄
+    { Mood.Calm, "\U0001F60C" },       // 😌
+    { Mood.Angry, "\U0001F620" }       // 😠
 };
 
 if (moodMap.TryGetValue(input, out Mood selectedMood))
@@ -39,4 +41,8 @@ else
     Console.WriteLine("Invalid selection. please enter a valid number");
 }
 
+Console.WriteLine("Press ENTER to exit.");
+Console.ReadLine();
+
 enum Mood { Happy = 1, Sad, Excited, Calm, Angry }
+
