@@ -10,3 +10,4 @@ var dog = (Name: "Buzz", WeightInKg: "50", SpeedInKm: "30");
 Console.WriteLine($"Name: {dog.Name}, Weight: {dog.WeightInKg}kg, Speed: {dog.SpeedInKm}km/h");
 
 // how to use tuples and methods together? ?
+
